@@ -7,3 +7,21 @@ p { font-size:  40px;}
 .texto2 {
     font-size: 10px;
 }
+
+p[name="texto3"] {
+    font-size: 20px;
+}
+
+/* para todo elemento p que contiene un atributo name con un valor que comienza con la palabra texto */
+p[name^="texto"] {
+    color: brown;
+}
+/* para todo elemento p que contiene un atributo name con un valor que termine con la palabra texto */
+p[name$="texto"]{
+    color: blue;
+}
+/* para todo elemento p que contiene un atributo name con un valor que contenga la palabra texto */
+p[name*="texto"]{
+    text-align: center;
+}
+
