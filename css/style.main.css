@@ -25,3 +25,8 @@ p[name*="texto"]{
     text-align: center;
 }
 
+/* Realizamos una pseudoreferencia  */
+
+p:nth-child(2){
+    text-align: center;
+}
