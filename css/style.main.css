@@ -1,3 +1,8 @@
+/* Asignar un margen de 0 pixeles a cada elemento del documento */
+* {
+    margin:  0px;
+}
+
 p { font-size:  40px;}
 
 #texto1 {
@@ -13,7 +18,7 @@ p[name="texto3"] {
 }
 
 /* para todo elemento p que contiene un atributo name con un valor que comienza con la palabra texto */
-p[name^="texto"] {
+p[name^="textito"] {
     color: brown;
 }
 /* para todo elemento p que contiene un atributo name con un valor que termine con la palabra texto */
@@ -21,12 +26,22 @@ p[name$="texto"]{
     color: blue;
 }
 /* para todo elemento p que contiene un atributo name con un valor que contenga la palabra texto */
-p[name*="texto"]{
+p[name*="textos"]{
     text-align: center;
 }
 
 /* Realizamos una pseudoreferencia  */
-
-p:nth-child(2){
+/* Utiliza el not para centrar a todos menos al segundo elemento */
+#wrapper p:not(:nth-child(2)){
     text-align: center;
+}
+
+
+/* Con el selector + el elemento siguiente de la clase p2 es afectado por el estilo */
+#wrapper p.p2 + p {
+    color: blueviolet;
+}
+
+p.p1 ~ p {
+    color: aquamarine;
 }
